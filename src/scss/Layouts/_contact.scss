@@ -1,0 +1,110 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 7rem;
+  gap: 3rem;
+
+  &--introduction {
+    max-width: 34rem;
+    width: min(34rem, 100%);
+    font-family: $font-family-secondary;
+
+    &-div {
+      max-width: 34rem;
+      width: min(34rem, 100%);
+    }
+  }
+
+  &--subintro {
+    font-family: $font-family-secondary;
+  }
+
+  &--email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px getColor(neutral, 100) solid;
+    border-radius: 0.2rem;
+    background-color: getColor(neutral, 100);
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.2);
+
+    margin-top: 1rem;
+    height: 4rem;
+    line-height: 1.3;
+    column-gap: getSize(400);
+    width: 17rem;
+
+    &:is(:hover, :active, :focus-visible) .contact--icon {
+      transform: scale(1.2);
+    }
+  }
+
+  &--email {
+    font-size: getFontSize(small, 300);
+  }
+
+  &--icon {
+    width: getSize(700);
+    transition-duration: 0.5s;
+  }
+
+  &--icons {
+    width: 2.5rem;
+
+    &:is(:hover, :active, :focus-visible) {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &--information {
+    padding: 1.5rem 1rem;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.3);
+    max-width: 34rem;
+    width: min(34rem, 100%);
+    background-color: getColor(primary, 400);
+    color: getColor(primary, 100);
+    border-radius: 0.4rem;
+
+    &-div {
+      max-width: 34rem;
+      width: min(34rem, 100%);
+    }
+  }
+
+  &--form {
+    display: grid;
+  }
+
+  &--input {
+    background-color: getColor(primary, 100);
+    border: 0;
+
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    resize: none;
+    color: getColor(primary, 400);
+    margin-bottom: 1rem;
+  }
+
+  &--submit {
+    margin-top: 0.7rem;
+    width: 4.6rem;
+    padding: 0.2rem;
+    background-color: getColor(primary, 500);
+    box-shadow: 0 4px 0.6em rgb(0, 0, 0, 0.4);
+    border-radius: 100vmax;
+
+    &:is(:hover, :active, :focus-visible) {
+      opacity: 0.7;
+    }
+  }
+}

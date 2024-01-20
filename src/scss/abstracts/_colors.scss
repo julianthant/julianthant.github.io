@@ -1,0 +1,43 @@
+$colors: (
+  primary: (
+    100: hsl(186, 100%, 98%),
+    200: hsl(194, 57%, 95%),
+    300: hsl(210, 14%, 58%),
+    400: hsl(234, 30%, 18%),
+    500: hsl(234, 30%, 27%),
+  ),
+  secondary: (
+    400: hsl(215, 90%, 42%),
+  ),
+  accent: (
+    100: #f5feff73,
+    150: rgba(188, 186, 186, 0.308),
+    200: hsl(0, 100%, 80%),
+    400: hsl(0, 100%, 70%),
+  ),
+  neutral: (
+    100: #ffffff,
+    900: #000000,
+  ),
+);
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+  }
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
+  }
+}

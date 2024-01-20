@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+@use '../components/map-functions' as *;
+@use '../utility/breakpoints' as *;
+
+.dashboard {
+  padding-top: 6rem;
+  &--heading {
+    margin-bottom: getSize(600);
+  }
+
+  &--tag {
+    background-color: getColor(primary, 400);
+    color: getColor(neutral, 100);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.5);
+  }
+}
+
+.info {
+  margin-block: 0.6rem;
+}
+
+.title {
+  margin-block: 0.8rem;
+}

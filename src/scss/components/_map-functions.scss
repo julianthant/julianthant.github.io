@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+@use '../abstracts/' as *;
+
+@function getColor($shade, $value) {
+  @return map-get($colors, $shade, $value);
+}
+
+@function getFontSize($size, $value) {
+  @return map-get($font-sizes, $size, $value);
+}
+
+@function getFontWeight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@function getSize($size) {
+  @return map-get($sizes, $size);
+}
