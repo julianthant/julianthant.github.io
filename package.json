@@ -1,34 +1,32 @@
 {
-  "name": "my-portfolio",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "my-latest-portfolio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@astrojs/netlify": "^2.6.0",
-    "@astrojs/react": "^2.3.2",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.7",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "@uidotdev/usehooks": "^2.1.1",
-    "astro": "^2.10.14",
-    "framer-motion": "^10.16.2",
-    "image-size": "^1.0.2",
-    "react": "^18.2.0",
-    "react-chrono": "^2.2.4",
-    "react-dom": "^18.2.0",
-    "react-simple-typewriter": "^5.0.1",
-    "react-vertical-timeline-component": "^3.6.0",
-    "tiny-glob": "^0.2.9"
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
-    "sass": "^1.66.1"
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "react-vertical-timeline-component": "^3.6.0",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "latest",
+    "typescript": "latest"
   }
 }

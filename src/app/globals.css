@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Contact Page */
+
+.mail-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-animation:hover .mail-icon {
+  transform: scale(1.2);
+}
+
+.contact-input {
+  background-color: white;
+  color: black;
+
+  outline: none;
+
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+
+  width: 100%;
+}
+
+/* Skills */
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.skills-tag {
+  transition: background-color 0.3s linear, opacity 0.5s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.skills-tag:hover > .skills-icon {
+  transform: scale(1.2);
+}
+
+.skills-level {
+  opacity: 0;
+  height: 0;
+  font-size: 0.8rem;
+  transition: opacity 0.5s ease-in-out, height 0.3s ease-in-out;
+}
+
+.skills-tag:hover .skills-level {
+  height: 1.1rem;
+  animation: fade-in 500ms forwards;
+  opacity: 1;
+}
+
+/* Overwrite Default Timeline Stylings */
+
+.vertical-timeline {
+  position: relative;
+}
+
+.vertical-timeline::before {
+  top: 2em !important;
+  height: calc(100% - 3.9em) !important;
+}
+
+.vertical-timeline-element-icon {
+  top: 50% !important;
+  left: 0.8rem !important;
+  width: 15px !important;
+  height: 15px !important;
+  background-color: black;
+  box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 15px !important;
+    height: 15px !important;
+    left: 52.09% !important;
+    box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+    top: 50% !important;
+  }
+}
+
+.vertical-timeline-element-content-arrow {
+  top: 50% !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 1px 0.75em rgba(0, 0, 0, 0.25) !important;
+  background-color: transparent !important;
+}
+
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    visibility: visible;
+    animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both !important;
+  }
+}
+
+/* Animation */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
